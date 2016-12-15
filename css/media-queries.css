@@ -1,0 +1,402 @@
+/************************************************************************************
+smaller than 1199
+*************************************************************************************/
+@media screen and (max-width: 1199px) {
+
+
+.wrapper-1180{
+			  width:96%;
+			}
+
+.wrapper-1115{
+			  width:96%;
+			}
+
+.wrapper-1080{
+			  width:94%;
+			}
+			
+			
+.index-nav ul li{ margin-left:50px; }
+
+
+.title-body2{
+			 margin-left:2%;
+			}
+			
+
+
+.testimonials-full{ padding-top:90px; }
+
+section.testimonials{
+				 width:93%;	 
+				 margin-left:3%;
+				 margin-top:60px;
+				}
+
+
+
+}
+
+
+/************************************************************************************
+smaller than 1023
+*************************************************************************************/
+@media screen and (max-width: 1023px) {
+
+.index-nav ul li{ font-size:14px; margin-left:25px; }
+
+.index-logo{
+			top:20%;
+			}
+			
+	.index-logo h1{ margin-bottom:40px; }
+	
+
+/* ------------ Start Navigation ------------ */
+	
+nav ul li{ font-size:12px; margin-left:15px; }
+
+/* ------------ End Navigation ------------ */
+
+
+
+/* --------- Start About ------------ */
+
+.title-full{ background-size:95% 100%; }
+
+.title-body{
+			padding:35px 0px 80px 0px;
+			}
+			
+				
+/* ---------- End About ------------ */
+
+}
+
+
+
+/************************************************************************************
+smaller than 767
+*************************************************************************************/
+@media screen and (max-width: 767px) {
+	
+.body-full{ background:#FFF; background-size:auto auto; padding-bottom:20px; }
+	
+.contact-fixed{ display:none; }
+.contact-full{ display:block; }
+
+
+.index-nav{
+		 width:200px;
+		 background:#FFF;
+		 padding:10px 20px;
+		}
+		
+.index-nav ul li{ color:#062248; width:100%; float:left; margin-left:0px; padding:5px 0px; }
+	.index-nav ul li a{ color:#062248; border-bottom:1px solid #FFF; }
+		.index-nav ul li a:hover{ color:#062248; border-bottom:1px solid #062248; }
+	.index-nav ul li a.fixed{ color:#062248; border-bottom:1px solid #062248; }
+
+/* ============ Start Navigation ============ */
+
+.top-full{ left:0px; top:0px; position:absolute; background:none; }
+
+.logo{
+	  width:100%;
+	  padding:0px 0px 20px 0px;
+	  position:relative;
+	  top:0px;
+	}
+
+nav{
+	 width:200px;
+	 background:#FFF;
+	 float:left;
+	 padding:10px 20px;
+	 text-align:center;
+	}
+
+	nav ul li{ width:100%; margin:0px; font-size:14px; }
+
+/* ============ End Navigation ============ */
+
+
+.slide-shade{
+			background:url(../images/ts-slide-shade2.png) repeat;
+			border-bottom:10px solid #e1ad01;
+			}
+			
+
+			
+.index-logo img{ width:60%; }
+
+.index-logo h1 {
+				margin-bottom: 10px;
+			 }
+			 
+.index-logo h2{ font-size:14px; line-height:20px; }
+
+
+
+/* -------------- Start Testimonials -------------- */
+
+.testimonials-full{ padding-top:0px; overflow:inherit; }
+.testimonials-full2{ width:100%; padding-bottom:0px; border-top:0px; transform: rotate(0deg); margin-left:0px; }
+
+section.testimonials{
+					 width:100%;
+					 margin-left:0px;
+					 padding:20px 30px;
+					 transform: rotate(0deg);
+				 	 margin-top:0px;
+					}
+					
+.left-arrow{ top:45%; }
+.right-arrow{ top:45%; }
+			
+/* -------------- End Testimonials -------------- */
+
+
+/* ------------- Start Bottom ------------- */
+
+.bottom-full{ margin-top:0px; }
+
+section.bottom{
+			 padding:30px 0px 0px 0px;
+			 text-align:center;
+			}
+			
+			
+.bottom-talent{
+				width:100%;
+				margin-bottom:25px;
+				}
+				
+.bottom-services{
+				width:100%;
+				margin-bottom:25px;
+				}
+				
+.bottom-candidates{
+				width:100%;
+				margin-bottom:25px;
+				}
+				
+.bottom-contact{
+				width:100%;
+				}
+											
+/* ------------- End Bottom ------------- */
+
+
+
+/* --------- Start Index --------- */
+
+.index-full{ overflow:auto; }
+
+.index-body-full{
+				 width:100%;
+				 padding:30px 2%;
+				 margin-top:0px;
+				 transform: rotate(0deg);
+				 margin-left:0px;
+				 margin-top:10px;
+				}
+				
+	.index-body{
+				 transform: rotate(0deg);
+				}
+	
+.index-body-full2{
+				 width:100%;
+				 padding:30px 2% 30px 2%;
+				 margin-top:0px;
+				 transform: rotate(0deg);
+				 margin-left:0px;
+				}
+				
+	.index-body2{
+				 transform: rotate(0deg);
+				}
+				
+		.experienced{
+					 width:100%;
+					 margin-top:0px;
+					}
+			
+		.quality{
+				 width:100%;
+				 margin-left:0px;
+				 margin-top:30px;
+				}
+			
+		.lower-fess{
+				 width:100%;
+				 margin-top:30px;
+				}
+			
+.index-body-full3{
+				 width:100%;
+				 padding:30px 2% 80px 2%;
+				 margin-top:0px;
+				 transform: rotate(0deg);
+				 margin-left:0px;
+				 margin-bottom:0px;
+				}
+				
+	.index-body3{
+				 transform: rotate(0deg);
+				}	
+	
+	
+.index-full2{ background:#FFF url(../images/ts-index-bg2a.png) left bottom no-repeat; }
+.index-full3{ display:none; }
+	
+.index-body4{
+			 padding:0px 2% 100px 2%;
+			 margin-top:-70px;
+			}
+				
+/* --------- End Index --------- */
+
+
+/* --------- Start About ------------ */
+
+.title-block-full{ padding-bottom:90px; }
+
+.title-full{ padding-bottom:0px; background:url(../images/ts-title-bg2.png) left center no-repeat; background-size:115% 100%; }
+
+	.title-body{
+				padding:25px 0px 100px 0px;
+				font-size: 25px; line-height:30px;
+				}
+				
+.title-full2{
+			 width:114%;
+			 padding:30px 0px;	 
+			 transform: rotate(-14deg);
+			 margin-left:-7%;
+			 margin-top:-115px;
+			 z-index:1;
+			}
+
+.title-body2{			
+			padding:0px 0px;
+			margin-left:6%;
+			font-size:28px; line-height:34px;
+			}
+			
+			
+section.about-content{
+					padding:30px 0px;
+					text-align:center;
+					}		
+				
+/* ---------- End About ------------ */
+
+
+
+/* -------- Start Administrative -------- */
+
+.administrative-left{
+					width:100%;
+					text-align:center;
+					margin-bottom:25px;
+					}
+		
+	.administrative-left table{ margin:25px 0px; }
+	.administrative-left table tr td{ width:100%; float:left; }
+					
+.administrative-right{
+					width:100%;
+					text-align:center;
+					}
+
+/* -------- End Administrative -------- */
+
+
+
+/* ------------- Start Contact ------------- */
+	
+.contact-left{
+				width:100%;
+				margin-bottom:30px;
+				}
+					
+.contact-right{
+				width:100%;
+				}
+					
+	
+.contact-bottom{ margin-bottom:40px; }
+
+/* ------------- End Contact ------------- */
+
+
+/* ---------- Start Job Seekers ---------- */
+
+.seekers-font{ text-align:center; margin-top:25px; }
+
+.job-seekers-body{
+				text-align:center;
+				}
+	
+	
+	.job-seekers-body table{ width:100%; }
+	
+	.job-seekers-body table tr td{ width:100%; float:left; }
+	
+	.job-seekers-body table tr td:nth-child(1){ padding-right:0px; }
+	.job-seekers-body table tr td:nth-child(2){ padding-left:0px; }
+
+/* ---------- End Job Seekers ---------- */
+					
+
+}
+
+
+
+/************************************************************************************
+smaller than 665
+*************************************************************************************/
+@media screen and (max-width: 650px) {
+
+.title-block-full{ padding-bottom:70px; }
+
+
+}
+
+
+	
+
+/************************************************************************************
+smaller than 479
+*************************************************************************************/
+@media screen and (max-width: 479px) {
+
+
+/* --------- Start About ------------ */
+
+.title-block-full{ padding-bottom:60px; }
+
+.title-body{
+			padding:20px 0px 120px 0px;
+			}		
+				
+/* ---------- End About ------------ */	  
+
+
+}
+
+
+/************************************************************************************
+smaller than 320
+*************************************************************************************/
+@media screen and (max-width: 320px) {
+
+
+
+
+
+}
