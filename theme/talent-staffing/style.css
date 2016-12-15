@@ -1,0 +1,900 @@
+@charset "utf-8";
+/*
+	Title # Talent Staffing
+	Date  # 24 November 2016
+*/
+
+
+*{ padding:0px; margin:0px; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{ padding:0px; margin:0px; background:#FFF; font-family:Arial, Helvetica, sans-serif; font-weight:normal; }
+
+.top-full{ width:100%; float:left; position:relative; background:#FFF; z-index:999999; }
+.header-full{ width:100%; float:left; position:relative; background:#FFF; }
+.nav-full{ width:100%; float:left; position:absolute; left:0px; top:0px; z-index:999999; padding:0px 2%; }
+.body-full{ width:100%; float:left; position:relative; background:#FFF; }
+.footer-full{ width:100%; float:left; position:relative; background:#2f292b; }
+
+.contact-fixed{ width:auto; background:#d89f00; float:right; position:fixed; right:0px; top:12%; z-index:9999999; }
+	.contact-fixed h2{ margin:0px; padding:0px; }
+		.contact-fixed h2 a{ padding:60px 30px; display:block; margin:0px; cursor:pointer; }
+	
+.contact-full{ width:100%; padding:30px 20px; background:#d89f00; float:left; position:relative; font-family: 'latobold'; font-size:40px; font-weight:normal; color:#FFF; line-height:40px; text-align:center; display:none; }
+	.contact-full a{ color:#FFF; }
+
+
+.wrapper-1180{
+			  width:1180px;
+			  margin:auto;
+			  text-align:left;
+			}
+
+.wrapper-1115{
+			  width:1115px;
+			  margin:auto;
+			  text-align:left;
+			}
+
+.wrapper-1080{
+			  width:1080px;
+			  margin:auto;
+			  text-align:left;
+			}
+
+@font-face {
+    font-family: 'latoregular';
+    src: url('./Font/Lato-Regular/lato-regular-webfont.eot');
+    src: url('./Font/Lato-Regular/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./Font/Lato-Regular/lato-regular-webfont.woff') format('woff'),
+         url('./Font/Lato-Regular/lato-regular-webfont.ttf') format('truetype'),
+         url('./Font/Lato-Regular/lato-regular-webfont.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latoitalic';
+    src: url('./Font/Lato-Italic/lato-italic-webfont.woff2') format('woff2'),
+         url('./Font/Lato-Italic/lato-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latolight';
+    src: url('./Font/Lato-Light/lato-light-webfont.eot');
+    src: url('./Font/Lato-Light/lato-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./Font/Lato-Light/lato-light-webfont.woff2') format('woff2'),
+         url('./Font/Lato-Light/lato-light-webfont.woff') format('woff'),
+         url('./Font/Lato-Light/lato-light-webfont.ttf') format('truetype'),
+         url('./Font/Lato-Light/lato-light-webfont.svg#latolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latoheavy';
+    src: url('./Font/Lato-Heavy/lato-heavy-webfont.woff2') format('woff2'),
+         url('./Font/Lato-Heavy/lato-heavy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latoblack';
+    src: url('./Font/Lato-Black/lato-black-webfont.eot');
+    src: url('./Font/Lato-Black/lato-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./Font/Lato-Black/lato-black-webfont.woff') format('woff'),
+         url('./Font/Lato-Black/lato-black-webfont.ttf') format('truetype'),
+         url('./Font/Lato-Black/lato-black-webfont.svg#latoblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latosemibold';
+    src: url('./Font/Lato-Semibold/lato-semibold-webfont.woff2') format('woff2'),
+         url('./Font/Lato-Semibold/lato-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'latobold';
+    src: url('./Font/Lato-Bold/lato-bold-webfont.eot');
+    src: url('./Font/Lato-Bold/lato-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./Font/Lato-Bold/lato-bold-webfont.woff') format('woff'),
+         url('./Font/Lato-Bold/lato-bold-webfont.ttf') format('truetype'),
+         url('./Font/Lato-Bold/lato-bold-webfont.svg#latobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('./Font/Roboto-Medium/roboto-medium-webfont.eot');
+    src: url('./Font/Roboto-Medium/roboto-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./Font/Roboto-Medium/roboto-medium-webfont.woff') format('woff'),
+         url('./Font/Roboto-Medium/roboto-medium-webfont.ttf') format('truetype'),
+         url('./Font/Roboto-Medium/roboto-medium-webfont.svg#robotomedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewaybold';
+    src: url('./Font/Raleway-Bold/raleway-bold-webfont.woff2') format('woff2'),
+         url('./Font/Raleway-Bold/raleway-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1,h2,h3,h4,h5,h6{ padding:0px; margin:0px; }
+p{ padding:0px; margin:0px; }
+
+address{ padding:0px; margin:0px; }
+
+pre{ padding:0px; margin:0px; }
+
+ul,ol{ padding:0px; margin:0px; }
+
+a{ color:#FF0000; text-decoration:none; }
+a img{ border:0px; }
+
+img{ max-width:100%; height:auto; }
+
+hr{ border:#FF0000; }
+
+q{ font-size:12px; }
+
+s{ color:#FF0000; }
+
+strike{ color:#F00; }
+
+sub, sup { font-size :75%; line-height:0; position:relative; vertical-align:baseline; }
+
+sup { top :-.5em; }
+
+.clear {clear:both;}	
+
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted #777;
+}
+
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+blockquote {
+  padding: 10px 20px;
+  margin:0px;
+  font-size: 17px;
+  border-left: 5px solid #eee;
+}
+blockquote p:last-child,
+blockquote ul:last-child,
+blockquote ol:last-child {
+  margin-bottom: 0;
+}
+
+blockquote footer,
+blockquote small,
+blockquote .small {
+  display: block;
+  font-size: 80%;
+  line-height: 1.42857143;
+  color: #777;
+}
+blockquote footer:before,
+blockquote small:before,
+blockquote .small:before {
+  content: '\2014 \00A0';
+}
+
+
+
+
+table, table th, table td, cellpadding, cellspacing, border{
+    border: medium none;
+    border-collapse: collapse;
+    padding: 0;
+}
+
+h1{ font-family:Arial, Helvetica, sans-serif; font-size:35px; color: #000; line-height:40px; margin-bottom:20px; }
+h2{ font-family:Arial, Helvetica, sans-serif; font-size:30px; color: #000; line-height:35px; margin-bottom:20px; }
+h3{ font-family:Arial, Helvetica, sans-serif; font-size:25px; color: #000; line-height:30px; margin-bottom:20px; }
+h4{ font-family:Arial, Helvetica, sans-serif; font-size:22px; color: #000; line-height:25px; margin-bottom:20px; }
+h5{ font-family:Arial, Helvetica, sans-serif; font-size:18px; color: #000; line-height:20px; margin-bottom:20px; }
+h6{ font-family:Arial, Helvetica, sans-serif; font-size:15px; color: #000; line-height:18px; margin-bottom:20px; }
+p{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color: #000; line-height:18px; margin-bottom:20px; }
+
+ul{ margin-bottom:20px; margin-left:20px; }
+li{ font-family:Arial, Helvetica, sans-serif; font-size:15px; color: #000; line-height:20px; list-style:disc; margin-bottom:10px; }
+
+	
+header, footer, section, aside, nav, article {
+display: block;
+}	
+
+header, nav, footer {
+	margin:0px 0px;
+}
+
+.inputbox{ font-family: 'latolight'; font-size:16px; color: #414042; line-height:32px; height:62px; border:1px solid #d8d8d8; background:#FFF; width:100%; padding:15px 20px; border-radius:0px; margin-bottom:15px; }
+
+.selectbox{ font-family: 'latolight'; font-size:16px; color: #414042; line-height:32px; height:62px; border:1px solid #d8d8d8; background:#FFF; width:100%; padding:0px 0px 0px 15px; border-radius:0px; margin-bottom:15px; }
+
+.textarea{ font-family: 'latolight'; font-size:16px; color: #414042; line-height:32px; height:265px; border:1px solid #d8d8d8; background:#FFF; width:100%; padding:15px 0px 0px 20px; border-radius:0px; margin-bottom:15px; }
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Start Text <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.prepand{ padding-top:5px; }
+.prepand2{ padding-top:10px; }
+.prepand3{ padding-top:15px; }
+
+.align-right{ text-align:right; }
+
+.font{ font-family: 'latoheavy'; font-size:14px; font-weight:normal; color:#062248; line-height:20px; }
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> End Text <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Start Top <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+section.top{
+			 width:100%;			
+			 float:left;
+			 position:relative;
+			}
+			
+.logo{
+	  width:auto;
+	  float:left;
+	  position:absolute;
+	  left:0px;
+	  top:7px;
+	  z-index:2;
+	}
+				
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> End Top <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Start Header <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+header{
+	 width:100%;
+	 float:left;
+	 position:relative;
+	}
+	
+	header img{ width:100%; }
+	
+.header-shade{
+			width:100%;
+			background:url(images/ts-header-shade.png) no-repeat;
+			height:100%;
+			background-size:100% 100%;
+			position:absolute;
+			left:0px;
+			top:0px;
+			z-index:1;
+			}
+			
+	.header-shade img{ width:100%; height:auto; }
+				
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> End Header <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+		
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Start Navigation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+nav{
+	 width:100%;
+	 padding:20px 0px;
+	 float:right;
+	 position:relative;
+	 text-align:right;
+	}
+	
+	nav ul{ margin:0px 0px; }
+	nav ul li{ margin:0px; padding:0px; font-family: 'latobold'; font-size:16px; font-weight:normal; 062248; line-height:28px; list-style:none; display:inline-block; text-transform:uppercase; margin-left:30px; }
+		nav ul li a{ color:#062248; display:block; border-bottom:1px solid #FFF; }
+			nav ul li a:hover{ color:#062248; border-bottom:1px solid #062248; }
+	nav ul li a.fixed{ color:#062248; border-bottom:1px solid #062248; }
+	nav ul li:first-child{ border:none; }
+	
+.index-nav{
+		 width:100%;
+		 padding:35px 0px 20px 0px;
+		 float:left;
+		 position:relative;
+		 text-align:center;
+		}
+	
+	.index-nav ul{ margin:0px 0px; }
+	.index-nav ul li{ margin:0px; padding:0px; font-family: 'latobold'; font-size:17px; font-weight:normal; color:#FFF; line-height:20px; list-style:none; display:inline-block; text-transform:uppercase; margin-left:75px; }
+		.index-nav ul li a{ color:#FFF; display:block; }
+			.index-nav ul li a:hover{ color:#FFF; }
+	.index-nav ul li a.fixed{ color:#FFF; }
+	.index-nav ul li:first-child{ margin-left:0px; }
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> End Navigation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Start Index Slide <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.index-logo{
+			width:100%;
+			float:left;
+			position:absolute;
+			left:0px;
+			top:30%;
+			z-index:3;
+			text-align:center;
+			}
+			
+	.index-logo h1{ margin-bottom:80px; }
+	.index-logo h2{ font-family: 'latosemibold'; font-size:22px; font-weight:normal; color:#FFF; line-height:25px; margin-bottom:15px; }
+
+section.index-slide{
+					 width:100%;
+					 float:left;
+					 position:relative;
+					}
+					
+	section.index-slide img{ width:100%; height:auto; }
+	
+	section.index-slide ul{ padding:0px; margin:0px; }
+	section.index-slide li{ padding:0px; margin:0px; list-style:none; }
+	
+.slide-shade{
+			width:100%;
+			background:url(images/ts-slide-shade.png) no-repeat;
+			height:100%;
+			background-size:100% 100%;
+			position:absolute;
+			left:0px;
+			top:0px;
+			z-index:1;
+			}
+			
+	.slide-shade img{ width:100%; height:auto; }
+				
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> End Index Slide <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Start Block Body <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+section.block-body{
+					 width:100%;
+					 padding:20px 0px 20px 0px;
+					 float:left;
+					 position:relative;
+					}
+					
+.main-body{
+			width:100%;
+			float:left;
+			position:relative;
+			}
+				
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> End Block Body <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Start Testimonials <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.testimonials-full{ width:100%; float:left; position:relative; padding-top:140px; z-index:6; overflow:hidden; }
+.testimonials-full2{ width:110%; float:left; position:relative; background:#2f292b; padding-bottom:150px; border-top:10px solid #d89f00; transform: rotate(-8deg); margin-left:-4%; }
+			
+
+section.testimonials{
+				 width:100%;
+				 padding:50px 13% 20px 13%;
+				 float:left;
+				 position:relative;
+				 text-align:center;	
+				 transform: rotate(8deg);
+				 margin-top:100px;		 
+				}
+			
+	section.testimonials ul{ padding:0px; margin:0px; margin-top:15px; width:100%; float:left; position:relative; }
+	section.testimonials li{ padding:0px; margin:0px; list-style:none; }
+	section.testimonials li p{ font-family: 'latoitalic'; font-size:24px; font-weight:normal; color:#FFF; line-height:30px; margin-bottom:10px; }
+		section.testimonials li p a{ color:#FFF; }
+	
+	section.testimonials li p span{ font-family: 'latoheavy'; font-size:14px; line-height:18px; margin:0px; }
+			
+	.left-arrow{
+				width:auto;
+				float:left;
+				position:absolute;
+				left:0px;
+				top:135px;
+				z-index:1;
+				cursor:pointer;
+				}
+				
+	.right-arrow{
+				width:auto;
+				float:left;
+				position:absolute;
+				right:0px;
+				top:135px;
+				z-index:1;
+				cursor:pointer;
+				}
+				
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> End Testimonials <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Start Bottom <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.bottom-full{ width:100%; float:left; position:relative; background:#2f292b; border-top:2px solid #d89f00; margin-top:-140px; z-index:7; }
+
+section.bottom{
+			 width:100%;
+			 padding:55px 3% 20px 6%;
+			 float:left;
+			 position:relative;
+			}
+			
+	section.bottom h3{ font-family: 'latoheavy'; font-size:14px; font-weight:normal; color:#dba200; line-height:20px; margin-bottom:5px; text-transform:uppercase; }
+		section.bottom h3 a{ color:#dba200; }
+		
+	section.bottom p{ font-family: 'latobold'; font-size:12px; font-weight:normal; color:#d2d3d4; line-height:18px; margin-bottom:10px; }
+		section.bottom p a{ color:#d2d3d4; }
+		
+	section.bottom ul{ padding:0px; margin:0px; }
+		section.bottom li{ padding:0px; margin:0px; list-style:none; display:block; font-family: 'latobold'; font-size:12px; font-weight:normal; color:#d2d3d4; line-height:18px; margin-bottom:5px; }
+			section.bottom li a{ color:#d2d3d4; }
+			
+	.bottom-talent{
+					width:28%;
+					float:left;
+					position:relative;
+					}
+					
+	.bottom-services{
+					width:27%;
+					float:left;
+					position:relative;
+					}
+					
+	.bottom-candidates{
+					width:15%;
+					float:left;
+					position:relative;
+					}
+					
+	.bottom-contact{
+					width:auto;
+					float:right;
+					position:relative;
+					}
+					
+		.bottom-contact ul{ padding:0px; margin:0px; }
+		.bottom-contact li{ padding:0px; margin:0px; list-style:none; display:inline-block !important; margin-left:5px; margin-top:20px !important; margin-bottom:0px; }
+		.bottom-contact li:first-child{ margin-left:0px; }		
+				
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> End Bottom <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Start Footer <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+footer{
+	 width:100%;
+	 padding:20px 0px 30px 0px;
+	 float:left;
+	 position:relative;
+	 font-family: 'robotomedium'; font-size:12px; font-weight:normal; color:#FFF; line-height:18px; text-align:center;
+	}
+	
+	footer a{ color:#FFF; }
+				
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> End Footer <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Start Index <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.index-full{ width:100%; float:left; position:relative; background:#FFF; overflow:hidden; }
+
+.index-body-full{
+				 width:105%;
+				 padding:60px 0px 50px 0px;
+				 background:#525254;
+				 float:left;
+				 position:relative;
+				 margin-top:40px;
+				 transform: rotate(-8deg);
+				 margin-left:-2%;
+				 z-index:1;
+				 margin-top:8%;
+				}
+				
+	.index-body{
+				 width:100%;
+				 float:left;
+				 position:relative;
+				 text-align:center;
+				 transform: rotate(8deg);
+				}
+	
+	.index-body h3{ font-family: 'latobold'; font-size:25px; font-weight:normal; color:#FFF; line-height:30px; text-transform:uppercase; margin-bottom:10px; }
+	.index-body p{ font-family: 'latoregular'; font-size:16px; font-weight:normal; color:#FFF; line-height:22px; margin-bottom:0px; }
+	
+.index-body-full2{
+				 width:108%;
+				 padding:10px 3% 10px 3%;
+				 background:#5a7dae;
+				 float:left;
+				 position:relative;
+				 margin-top:17px;
+				 transform: rotate(8deg);
+				 margin-left:-4%;
+				 z-index:3;
+				}
+				
+	.index-body2{
+				 width:100%;
+				 float:left;
+				 position:relative;
+				 text-align:center;
+				 transform: rotate(-8deg);
+				}
+				
+		.experienced{
+					 width:25%;
+					 float:left;
+					 position:relative;
+					 margin-top:-40px;
+					}
+					
+			.experienced img{ margin-bottom:20px; }
+					
+			.experienced h3{ font-family: 'latoregular'; font-size:26px; font-weight:normal; color:#FFF; line-height:30px; text-transform:uppercase; margin-bottom:10px; }
+			.experienced p{ font-family: 'latolight'; font-size:16px; font-weight:normal; color:#FFF; line-height:22px; margin-bottom:0px; }
+			
+		.quality{
+				 width:25%;
+				 float:left;
+				 position:relative;
+				 margin-left:13%;
+				 margin-top:20px;
+				}
+			
+			.quality img{ margin-bottom:20px; }
+					
+			.quality h3{ font-family: 'latoregular'; font-size:26px; font-weight:normal; color:#FFF; line-height:30px; text-transform:uppercase; margin-bottom:10px; }
+			.quality p{ font-family: 'latolight'; font-size:16px; font-weight:normal; color:#FFF; line-height:22px; margin-bottom:0px; }
+			
+		.lower-fess{
+				 width:25%;
+				 float:right;
+				 position:relative;
+				 margin-top:75px;
+				}
+				
+			.lower-fess img{ margin-bottom:20px; }
+					
+			.lower-fess h3{ font-family: 'latoregular'; font-size:26px; font-weight:normal; color:#FFF; line-height:30px; text-transform:uppercase; margin-bottom:10px; }
+			.lower-fess p{ font-family: 'latolight'; font-size:16px; font-weight:normal; color:#FFF; line-height:22px; margin-bottom:0px; }
+			
+.index-body-full3{
+				 width:104%;
+				 padding:80px 0px 70px 0px;
+				 background:#03305a;
+				 float:left;
+				 position:relative;
+				 margin-top:40px;
+				 transform: rotate(-8deg);
+				 margin-left:-3%;
+				 z-index:1;
+				 margin-bottom:138px;
+				}
+				
+	.index-body3{
+				 width:100%;
+				 float:left;
+				 position:relative;
+				 text-align:center;
+				 transform: rotate(8deg);
+				}
+	
+	.index-body3 h3{ font-family: 'latobold'; font-size:25px; font-weight:normal; color:#FFF; line-height:35px; text-transform:uppercase; margin-bottom:10px; }
+	
+	
+	
+.index-full2{ width:100%; float:left; position:relative; background:#FFF; z-index:5; }
+.index-full3{ width:100%; float:left; position:absolute; left:0px; bottom:-250px; z-index:1; }
+	
+.index-body4{
+			 width:100%;
+			 padding:0px 2%;
+			 float:left;
+			 position:relative;
+			 text-align:center;
+			 margin-top:-148px;
+			 z-index:2;
+			}
+			
+	.index-body4 img{ margin-bottom:25px; }
+	
+	.index-body4 h3{ font-family: 'latoregular'; font-size:25px; font-weight:normal; color:#062248; line-height:30px; text-transform:uppercase; margin-bottom:20px; }
+		.index-body4 h3{ color:#062248; }
+		
+.index-map{ padding-bottom:100px; }
+				
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> End Index <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Start About <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.title-block-full{ width:100%; float:left; position:relative; z-index:9999; overflow:hidden; margin-top:-110px; padding:100px 0px 142px 0px; }
+
+.title-full{ width:100%; float:left; position:relative; padding-bottom:45px; background:url(images/ts-title-bg2.png) left center no-repeat; background-size:90% 100%; }
+
+	.title-body{
+				width:auto;
+				padding:35px 0px 70px 0px;
+				/*background:#dea500;*/
+				float:left;
+				position:relative;
+				font-family: 'latoblack'; font-size:28px; font-weight:normal; color:#414042; line-height:35px; text-transform:uppercase;
+				}
+			
+.title-full2{
+			 width:106%;
+			 padding:30px 0px;
+			 background:#414042;
+			 float:left;
+			 position:relative;			 
+			 transform: rotate(-8deg);
+			 margin-left:-3%;
+			 margin-top:-145px;
+			 z-index:1;
+			}
+			
+	.title-body2{
+				width:auto;
+				padding:15px 0px;
+				float:left;
+				position:relative;
+				font-family: 'latobold'; font-size:50px; font-weight:normal; color:#FFF; line-height:55px; text-transform:uppercase;
+				transform: rotate(0deg);
+				margin-left:0%;
+				}
+				
+section.about-content{
+					width:100%;
+					padding:20px 0px 20px 0px;
+					float:left;
+					position:relative;
+					}
+					
+	section.about-content h2{ font-family: 'latobold'; font-size:24px; font-weight:normal; color:#062248; line-height:30px; text-transform:uppercase; margin-bottom:25px; }
+	section.about-content h3{ font-family: 'latoregular'; font-size:18px; font-weight:normal; color:#062248; line-height:24px; text-transform:uppercase; margin-bottom:5px; }
+	section.about-content p{ font-family: 'latolight'; font-size:16px; font-weight:normal; color:#414042; line-height:24px; margin-bottom:25px; }
+				
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> End About <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+ 
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Start Testimonials <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.testimonials-full3{ width:100%; float:left; position:relative; border-bottom:1px solid #062248; }
+
+.testimonials-content{
+					width:100%;
+					padding:30px 0px;					
+					float:left;
+					position:relative;
+					text-align:center;
+					}
+					
+	.testimonials-content h3{ font-family: 'latoregular'; font-size:18px; font-weight:normal; color:#062248; line-height:24px; text-transform:uppercase; margin-bottom:5px; }
+	.testimonials-content p{ font-family: 'latoitalic'; font-size:16px; font-weight:normal; color:#414042; line-height:24px; margin-bottom:20px; }
+	
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> End Testimonials <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Start administrative <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Start Administrative <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.administrative-left{
+					width:45%;
+					float:left;
+					position:relative;
+					}
+					
+	.administrative-left h2{ font-family: 'latobold'; font-size:24px; font-weight:normal; color:#062248; line-height:30px; text-transform:uppercase; margin-bottom:20px; }
+	.administrative-left h3{ font-family: 'latoregular'; font-size:18px; font-weight:normal; color:#062248; line-height:24px; text-transform:uppercase; margin-bottom:20px; }
+	.administrative-left p{ font-family: 'latolight'; font-size:16px; font-weight:normal; color:#414042; line-height:22px; margin-bottom:5px; }
+		.administrative-left p a{ color:#414042; }
+		
+	.administrative-left table{ margin:25px 0px 40px 0px; }
+	.administrative-left table tr td{ font-family: 'latolight'; font-size:16px; font-weight:normal; color:#414042; line-height:22px; padding:3px 0px; }
+					
+.administrative-right{
+					width:50%;
+					float:right;
+					position:relative;
+					}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> End Administrative <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Start Contact <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.contact-block{ width:100%; float:left; position:relative; }
+.contact-map{ width:100%; float:left; position:relative; }
+	.contact-map img{ width:100%; height:auto; }
+	
+
+.contact-left{
+				width:45%;
+				float:left;
+				position:relative;
+				}
+				
+	.contact-left p{ font-family: 'latolight'; font-size:16px; font-weight:normal; color:#414042; line-height:22px; margin-bottom:25px; margin-top:5px; }
+		.contact-left p a{ color:#414042; }
+					
+.contact-right{
+				width:49%;
+				float:right;
+				position:relative;
+				text-align:center;
+				}
+				
+	.contact-right h2{ font-family: 'latobold'; font-size:18px; font-weight:normal; color:#062248; line-height:24px; text-transform:uppercase; margin-bottom:30px; }
+	
+.submit{
+		width:auto;
+		padding:15px 60px;
+		background:#dda400 url(images/ts-yellow.gif) repeat;
+		border:0px;
+		font-family: 'ralewaybold'; font-size:13px; font-weight:normal; color:#FFF; line-height:20px; text-transform:uppercase; display:inline-block; text-align:center;
+		border-radius:50px;
+		cursor:pointer;
+		}
+		
+	
+.contact-bottom{ width:100%; float:left; position:relative; border-top:1px solid #cbcbcb; border-bottom:1px solid #cbcbcb; text-align:center; padding:30px 2%; margin-bottom:80px; }
+
+	.contact-bottom h2{ font-family: 'latoregular'; font-size:22px; font-weight:normal; color:#062248; line-height:28px; text-transform:uppercase; margin-bottom:5px; }
+	.contact-bottom h3{ font-family: 'latoitalic'; font-size:20px; font-weight:normal; color:#062248; line-height:28px; text-transform:uppercase; margin-bottom:8px; }
+	
+	.contact-bottom p{ font-family: 'latolight'; font-size:18px; font-weight:normal; color:#414042; line-height:24px; margin-bottom:8px; }
+	
+	
+/* --------- Start Contact Popup ---------- */
+
+.contact-popup{
+				width:400px;
+				padding:15px 30px;
+				border:1px solid #d9a000;
+				background:#FFF;
+				float:left;
+				position:absolute;
+				right:0px;
+				top:0px;
+				z-index:2;
+				display:none;
+				text-align:center;
+				}
+				
+	.contact-popup img{ cursor:pointer; }
+	
+	.contact-popup h3{ font-family: 'latobold'; font-size:25px; font-weight:normal; color:#d9a000; line-height:30px; margin-bottom:25px; padding-bottom:20px; border-bottom:1px solid #d9a000; text-align:center; }
+	
+	.contact-popup p{ font-family: 'latolight'; font-size:14px; font-weight:normal; color:#414042; line-height:20px; margin-bottom:35px; text-align:center; }
+	
+.popup-inputbox{ font-family: 'latolight'; font-size:16px; color: #414042; line-height:32px; height:62px; border:1px solid #d8d8d8; background:#FFF; width:90%; padding:15px 20px; border-radius:0px; margin-bottom:15px; }
+
+/* --------- End Contact Popup ---------- */
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> End Contact <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Start Job Seekers <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.seekers-font{ font-family: 'latoregular'; font-size:18px; font-weight:normal; color:#062248; line-height:24px; text-transform:uppercase; }
+
+.job-seekers-body{
+				width:100%;
+				float:left;
+				position:relative;
+				}
+					
+	.job-seekers-body h2{ font-family: 'latobold'; font-size:24px; font-weight:normal; color:#062248; line-height:30px; text-transform:uppercase; margin-bottom:20px; }
+	.job-seekers-body h3{ font-family: 'latoregular'; font-size:18px; font-weight:normal; color:#062248; line-height:24px; text-transform:uppercase; margin-bottom:5px; }
+	.job-seekers-body h3 strong{ font-family: 'latobold'; font-weight:normal; }
+	
+	.job-seekers-body p{ font-family: 'latolight'; font-size:16px; font-weight:normal; color:#414042; line-height:22px; margin-bottom:25px; }
+		.job-seekers-body p a{ color:#414042; }
+	.job-seekers-body p span{ font-family: 'latoitalic'; }
+	.job-seekers-body p strong{ font-family: 'latosemibold'; font-variant:normal; }
+	
+	
+	.job-seekers-body table{ width:90%; margin-bottom:30px; }
+	.job-seekers-body table tr td{ padding:4px 0px; }
+	
+	.job-seekers-body table tr td:nth-child(1){ padding-right:0.5%; }
+	.job-seekers-body table tr td:nth-child(2){ padding-left:0.5%; }
+	
+.job-sekker-inputbox{
+					width:49.5%;
+					float:left;
+					position:relative;
+					}
+					
+.job-sekker-inputbox2{
+					width:49.5%;
+					float:right;
+					position:relative;
+					}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> End Job Seekers <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Start Button <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.button{
+		width:auto;
+		padding:15px 30px;
+		background:#dda400 url(images/ts-yellow.gif) repeat;
+		border:0px;
+		font-family: 'ralewaybold'; font-size:13px; font-weight:normal; color:#FFF; line-height:20px; text-transform:uppercase; display:inline-block; text-align:center;
+		border-radius:50px;
+		cursor:pointer;
+		}
+		
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> End Button <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */

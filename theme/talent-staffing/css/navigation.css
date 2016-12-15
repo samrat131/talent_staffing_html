@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+.btn{
+	display:none;
+}
+nav{
+	display:block;
+	}
+	
+.index-nav{
+		 display:block;
+		}
+
+#myslidemenu2{
+	display:block;
+}
+
+@media (max-width: 767px){
+	
+nav{
+	display:none;
+	}
+	
+.index-nav{
+		 display:none;
+		}	
+	
+.btn{
+	  width:100%;
+	  float:left;
+	  position:relative;
+	  padding:20px 0px 10px 0px;
+	  display:block;		  
+	  font-family: 'latosemibold'; font-size:20px; font-weight:normal; color:#062248; line-height:24px; text-transform:uppercase;
+	  cursor:pointer;		  
+}
+
+#myslidemenu2{
+	display:none;
+	}
+	
+
+}
