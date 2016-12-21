@@ -52,7 +52,7 @@ get_header(); ?>
 <div class="body-full">
 <div class="wrapper-1180"> 
 
-	<section class="about-content">
+	<section class="block-body">
     	
         
 
@@ -73,6 +73,47 @@ get_header(); ?>
 
 </div>    
 </div>
+
+<!-- <div class="job-seekers-body">
+	<h2>SUBMIT YOUR RESUME</h2>
+    <h3><strong>PERSONAL INFORMATION</strong></h3>
+    <table cellpadding="0" cellspacing="0" border="0">
+    	<tr>
+        	<td width="50%">[text* fname class:inputbox placeholder "First Name *"]</td>
+            <td width="50%">[text* lname class:inputbox placeholder "Last Name *"]</td>
+        </tr>
+        <tr>
+        	<td>[text* st-addr1 class:inputbox placeholder "Street Address *"]</td>
+            <td>[text* st-addr2 class:inputbox placeholder "Street Address 2 *"]</td>
+        </tr>
+        <tr>
+        	<td>[text* city class:inputbox placeholder "City *"]</td>
+            <td>
+            	<div class="job-sekker-inputbox">[text* state class:inputbox placeholder "State *"]</div>
+                <div class="job-sekker-inputbox2">[text* zip-code class:inputbox placeholder "Zip Code *"]</div>                    	
+            </td>
+        </tr>
+        <tr>
+        	<td>[tel* r-phone class:inputbox placeholder "Phone Number *"]</td>
+            <td>[email* r-email class:inputbox placeholder "Email *"]</td>
+        </tr>
+        <tr>
+        	<td>[text* salary class:inputbox placeholder "Salary Requirements *"]</td>
+            <td>[select* designation class:selectbox "Manager" "Engineer" "Executive"]</td>
+        </tr>               
+    </table>
+    <h3><strong>UPLOAD RESUME*</h3>
+    <table cellpadding="0" cellspacing="0" border="0">
+    	<tr>
+        	<td width="50%">[file* file-resume filetypes:doc.docx.pdf class:submit]</td>
+            <td width="50%"> </td>
+        </tr>
+    </table>
+    <div class="prepand2">[submit class:button "SEND MY APPLICATION"]</div>
+</div> 
+
+"Alabama" "Alaska" "Arizona" "Arkansas" "California" "Colorado" "Connecticut" "Delaware" "Florida" "Georgia" "Hawaii" "Idaho" "Illinois Indiana" "Iowa" "Kansas" "Kentucky" "Louisiana" "Maine" "Maryland" "Massachusetts" "Michigan" "Minnesota" "Mississippi" "Missouri" "Montana Nebraska" "Nevada" "New Hampshire" "New Jersey" "New Mexico" "New York" "North Carolina" "North Dakota" "Ohio" "Oklahoma" "Oregon" "Pennsylvania Rhode Island" "South Carolina" "South Dakota" "Tennessee" "Texas" "Utah" "Vermont" "Virginia" "Washington" "West Virginia" "Wisconsin" "Wyomin" 
+-->
 
 <?php
 //get_sidebar();

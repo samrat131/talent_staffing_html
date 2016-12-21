@@ -13,7 +13,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php
-		while ( have_posts() ) : the_post();
+		/*while ( have_posts() ) : the_post();
 
 			get_template_part( 'template-parts/content', get_post_format() );
 
@@ -24,12 +24,12 @@ get_header(); ?>
 				comments_template();
 			endif;
 
-		endwhile; // End of the loop.
+		endwhile; // End of the loop.*/
 		?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

@@ -714,9 +714,9 @@ section.about-content{
 					position:relative;
 					}
 					
-	section.about-content h2{ font-family: 'latobold'; font-size:24px; font-weight:normal; color:#062248; line-height:30px; text-transform:uppercase; margin-bottom:25px; }
-	section.about-content h3{ font-family: 'latoregular'; font-size:18px; font-weight:normal; color:#062248; line-height:24px; text-transform:uppercase; margin-bottom:5px; }
-	section.about-content p{ font-family: 'latolight'; font-size:16px; font-weight:normal; color:#414042; line-height:24px; margin-bottom:25px; }
+	section.block-body h2{ font-family: 'latobold'; font-size:24px; font-weight:normal; color:#062248; line-height:30px; text-transform:uppercase; margin-bottom:25px; }
+	section.block-body h3{ font-family: 'latoregular'; font-size:18px; font-weight:normal; color:#062248; line-height:24px; text-transform:uppercase; margin-bottom:5px; }
+	section.block-body p{ font-family: 'latolight'; font-size:16px; font-weight:normal; color:#414042; line-height:24px; margin-bottom:25px; }
 				
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> End About <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 

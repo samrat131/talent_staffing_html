@@ -102,12 +102,13 @@ add_action( 'widgets_init', 'talent_staffing_widgets_init' );
  * Enqueue scripts and styles.
  */
 function talent_staffing_scripts() {
-	wp_enqueue_style( 'talent-staffing-style-print', get_template_directory_uri() . '/css/print.css', array(), '20151215', true );
-	wp_enqueue_style( 'talent-staffing-style-reset', get_template_directory_uri() . '/css/reset.css', array(), '20151215', true );
+	wp_enqueue_style( 'talent-staffing-style-print', get_template_directory_uri() . '/css/print.css' );
+	wp_enqueue_style( 'talent-staffing-style-reset', get_template_directory_uri() . '/css/reset.css' );
 	wp_enqueue_style( 'talent-staffing-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'talent-staffing-style-nav', get_template_directory_uri() . '/css/navigation.css', array(), '20151215', true );
-	wp_enqueue_style( 'talent-staffing-style-media', get_template_directory_uri() . '/css/media-queries.css', array(), '20151215', true );
-	wp_enqueue_style( 'talent-staffing-style-bxslider', get_template_directory_uri() . '/js/jquery.bxslider.css', array(), '20151215', true );
+	wp_enqueue_style( 'talent-staffing-style-nav', get_template_directory_uri() . '/css/navigation.css' );
+	wp_enqueue_style( 'talent-staffing-style-media', get_template_directory_uri() . '/css/media-queries.css' );
+	wp_enqueue_style( 'talent-staffing-style-bxslider', get_template_directory_uri() . '/js/jquery.bxslider.css' );
+	wp_enqueue_style( 'talent-staffing-style-override', get_template_directory_uri() . '/css/override.css' );
 
 	//wp_enqueue_script( 'talent-staffing-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'talent-staffing-nav-script', get_template_directory_uri() . '/js/nav-script.js', array(), '20151215', true );
@@ -146,3 +147,13 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load testimonial cpt.
+ */
+require get_template_directory() . '/inc/custom_post_type_testimonial.php';
+
+/**
+ * Load slider cpt.
+ */
+require get_template_directory() . '/inc/custom_post_type_slider.php';
