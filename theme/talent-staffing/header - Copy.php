@@ -25,20 +25,47 @@
 <meta name="theme-color" content="#ffffff">
 
 <?php wp_head(); ?>
-
+<!-- <script type="text/javascript">
+    jQuery(document).ready(function($) {
+        jQuery('#show-contect').click(function(event) {
+            jQuery('.contact-popup').show('slide',{direction:'right'},1000);
+        });
+    });
+</script> -->
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
 </head>
 
 <body <?php body_class(); ?>>
 
-<div class="contact-fixed">
-    <h2><a onclick="showContact(1)"><img src="<?php bloginfo('template_directory') ?>/images/ts-text.png" alt="CONTACT" title="CONTACT"></a></h2>
+<!-- <div class="contact-fixed">
+	<h2><a id="show-contect"><img src="<?php bloginfo('template_directory') ?>/images/ts-text.png" alt="CONTACT" title="CONTACT"></a></h2>
     <div class="contact-popup">
-        <div class="align-right"><a onclick="showContact(0)"><img src="<?php bloginfo('template_directory') ?>/images/ts-cross.png" alt="close" title="close"></a></div>
+    	<div class="align-right"><a ><img src="<?php bloginfo('template_directory') ?>/images/ts-cross.png" alt="close" title="close"></a></div>
+        <h3>CONTACT US</h3>
+        <p>Fill out your information in the from <br>below to contact us today!</p>
+        <?php echo do_shortcode( '[contact-form-7 id="46" title="Contact Popup"]'); ?>
+    </div>
+</div> -->
+
+<div class="contact-fixed">
+    <h2><a onclick="jQuery('.contact-popup').animate({'right':'+=400'});"><img src="<?php bloginfo('template_directory') ?>/images/ts-text.png" alt="CONTACT" title="CONTACT"></a></h2>
+    <div class="contact-popup">
+        <div class="align-right"><a onclick="jQuery('.contact-popup').animate({'right':'-=400'});"><img src="<?php bloginfo('template_directory') ?>/images/ts-cross.png" alt="close" title="close"></a></div>
         <h3>CONTACT US</h3>
         <p>Fill out your information in the from <br>below to contact us today!</p>
         <?php echo do_shortcode( '[contact-form-7 id="46" title="Contact Popup"]'); ?>
     </div>
 </div>
+
+<!-- <div class="contact-fixed">
+    <h2><a onclick="jQuery('.contact-popup').slideToggle()"><img src="<?php bloginfo('template_directory') ?>/images/ts-text.png" alt="CONTACT" title="CONTACT"></a></h2>
+    <div class="contact-popup">
+        <div class="align-right"><a onclick="jQuery('.contact-popup').slideToggle()"><img src="<?php bloginfo('template_directory') ?>/images/ts-cross.png" alt="close" title="close"></a></div>
+        <h3>CONTACT US</h3>
+        <p>Fill out your information in the from <br>below to contact us today!</p>
+        <?php echo do_shortcode( '[contact-form-7 id="46" title="Contact Popup"]'); ?>
+    </div>
+</div> -->
 
 <?php if ( is_front_page() && is_home() ) : ?>
 <div class="nav-full">
@@ -75,21 +102,6 @@
 
 
 <?php if ( is_front_page() && is_home() ) : ?>
-<?php
-// WP_Query arguments
-$args = array (
-    'post_type'             => 'slider',
-    'post_status'           => 'publish',
-    'orderby'               => 'menu_order',
-    'order'                 => 'ASC',
-    //'meta_key'              => '_ss_testimonial_type',
-    //'meta_value'            => 'featured',
-    'posts_per_page'        => 99
-);
-
-// The Query
-$query = new WP_Query( $args );
-?>
 <div class="header-full">
 	<div class="index-logo">
     	<h1><img src="<?php  
@@ -100,42 +112,25 @@ $query = new WP_Query( $args );
                     }
                     ?>" alt="<?php bloginfo( 'name' ); ?>" title="<?php bloginfo( 'name' ); ?>"></h1>
         <h2><?php bloginfo( 'description' ); ?></h2>
-
-        <div class="bx-wrapper">
-          <div id="bx-pager" class="bx-pager bx-default-pager">
-          <?php 
-        // The Loop
-        if ( $query->have_posts() ) {
-            $p = 0;
-            while ( $query->have_posts() ) {
-                $query->the_post();
-                if(has_post_thumbnail()) {
-                    $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
-                    //print_r($large_image_url);
-                    //die();
-                    if ( ! empty( $large_image_url[0] ) ) {
-        ?>
-            <div class="bx-pager-item"><a href="" data-slide-index="<?php echo $p ?>" class="bx-pager-link"><?php echo ++$p; ?></a></div>
-        <?php        
-                    }
-                }
-            }
-        } else {
-            // no posts found
-        }
-
-        // Restore original Post Data
-        wp_reset_postdata();
-        ?>            
-          </div>
-        </div>
-
     </div>
     <section class="index-slide">
     	<div class="slide-shade"></div>
         <ul class="bxslider">
-        
-        <?php 
+        <?php
+        // WP_Query arguments
+        $args = array (
+            'post_type'             => 'slider',
+            'post_status'           => 'publish',
+            'orderby'               => 'menu_order',
+            'order'                 => 'ASC',
+            //'meta_key'              => '_ss_testimonial_type',
+            //'meta_value'            => 'featured',
+            'posts_per_page'        => 99
+        );
+
+        // The Query
+        $query = new WP_Query( $args );
+
         // The Loop
         if ( $query->have_posts() ) {
             while ( $query->have_posts() ) {
@@ -163,7 +158,6 @@ $query = new WP_Query( $args );
             <li><img src="<?php bloginfo('template_directory') ?>/images/ts-slide-image.png" alt="Image" title="Image"></li>  -->
         </ul>
     </section>
-
 <?php //else : ?>
 </div>
 <?php endif; ?>

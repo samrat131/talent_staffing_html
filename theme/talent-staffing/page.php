@@ -22,7 +22,7 @@ get_header(); ?>
 		$sub_title_2 = get_field( "sub_title_2" );
 	}
 ?>
-
+<div class="header-full">
 <header>
 	<div class="header-shade"></div>
 	<?php 
@@ -32,6 +32,7 @@ get_header(); ?>
 	<img src="<?php bloginfo('template_directory') ?>/images/ts-about.jpg" alt="Image" title="Image">
 	<?php } ?>
 </header>
+</div>
 
 <div class="title-block-full">
 

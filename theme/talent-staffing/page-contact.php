@@ -48,7 +48,7 @@ get_header(); ?>
     </div>
 
 </div> 
-
+<?php /* ?>
 <!-- <div>[text* name class:inputbox placeholder "Name *"]</div>
 <div>[email* email class:inputbox placeholder "Email *"]</div>
 <div>[text* subject class:inputbox placeholder "Subject *"]</div>
@@ -62,6 +62,9 @@ get_header(); ?>
 <div>[tel* phone class:popup-inputbox placeholder "Phone *"]</div>
 <div>[text* state class:textarea placeholder "State/Province*"]</div>
 <div class="prepand3">[submit class:submit "SUBMIT"]</div> -->
+
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3628.6887553876904!2d-74.0606076664911!3d40.112172504009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c18641a04f2da5%3A0x756f9df766364622!2s617+Union+Ave%2C+Brielle%2C+NJ+08730%2C+USA!5e0!3m2!1sen!2sbd!4v1482226640642" width="1600" height="456" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+<?php */ ?>
 
 <div class="body-full">
 <div class="wrapper-1180"> 
@@ -89,7 +92,8 @@ get_header(); ?>
 </div>
 
 <div class="contact-map">
-	<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3628.6887553876904!2d-74.0606076664911!3d40.112172504009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c18641a04f2da5%3A0x756f9df766364622!2s617+Union+Ave%2C+Brielle%2C+NJ+08730%2C+USA!5e0!3m2!1sen!2sbd!4v1482226640642" width="1600" height="456" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+	
+	<div class="overlay" onclick="style.pointerEvents='none'"></div>
 	<?php 
 	if (function_exists('get_field')) {
 		echo get_field('google_map');
